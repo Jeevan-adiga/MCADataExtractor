@@ -29,7 +29,6 @@ import auto.framework.web.WebControl;
 
 /**
  * Work In Progress
- * @author jeremiah.d.mendoza
  */
 public class ReportLog {//extends ReportLog_ForRevamp {
 	

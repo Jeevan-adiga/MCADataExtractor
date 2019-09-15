@@ -16,7 +16,6 @@ import auto.framework.TestManager;
 
 /**
  * Experimental
- * @author jeremiah.d.mendoza
  */
 public class TrendReport {
 
