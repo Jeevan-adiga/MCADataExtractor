@@ -6,10 +6,11 @@ import org.apache.commons.io.FileUtils;
 import org.testng.Reporter;
 import org.testng.annotations.Test;
 
-import Exception.FilloException;
-import Fillo.Connection;
-import Fillo.Fillo;
-import Fillo.Recordset;
+import com.codoid.products.exception.FilloException;
+import com.codoid.products.fillo.Connection;
+import com.codoid.products.fillo.Fillo;
+import com.codoid.products.fillo.Recordset;
+
 import auto.framework.Resources;
 import auto.framework.TestManager;
 
