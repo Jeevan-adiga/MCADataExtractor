@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Test Suite" parallel="false" thread-count="1">
+	<test name="Get_CastDetails_for_a_movie">
+		<classes>
+			<class name="com.api.automation.Get_CastDetails_for_a_movie"></class>
+		</classes>
+	</test>
+</suite>

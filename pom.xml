@@ -8,11 +8,14 @@
 	<name>automation-selenium-java</name>
 
 	<dependencies>
+		<!-- Base framework -->
 		<dependency>
 			<groupId>org.testng</groupId>
 			<artifactId>testng</artifactId>
 			<version>6.9.10</version>
 		</dependency>
+		
+		<!-- Selenium dependency to work with browser -->
 		<dependency>
 			<groupId>org.seleniumhq.selenium</groupId>
 			<artifactId>selenium-java</artifactId>
@@ -21,37 +24,28 @@
 		<dependency>
 			<groupId>org.seleniumhq.selenium</groupId>
 			<artifactId>selenium-server</artifactId>
-			<version>2.48.0</version>
+			<version>3.141.0</version>
 		</dependency>
-		<dependency>
-			<groupId>com.codoid.products</groupId>
-			<artifactId>fillo</artifactId>
-			<version>1.21</version>
-		</dependency>
-		<dependency>
-			<groupId>commons-io</groupId>
-			<artifactId>commons-io</artifactId>
-			<version>2.4</version>
-		</dependency>
+
+		<!-- Lib to work with web-services -->		
 		<dependency>
 			<groupId>org.apache.httpcomponents</groupId>
 			<artifactId>httpclient</artifactId>
 			<version>4.5.1</version>
 		</dependency>
+		
+		<!-- Common utility lib -->
 		<dependency>
-			<groupId>com.saucelabs</groupId>
-			<artifactId>sauce_testng</artifactId>
-			<version>2.1.25</version>
+			<groupId>commons-io</groupId>
+			<artifactId>commons-io</artifactId>
+			<version>2.4</version>
 		</dependency>
+		
+		<!-- Dependencies for working with excel file -->
 		<dependency>
-			<groupId>com.saucelabs</groupId>
-			<artifactId>saucerest</artifactId>
-			<version>1.0.39</version>
-		</dependency>
-		<dependency>
-			<groupId>com.saucelabs.maven.plugin</groupId>
-			<artifactId>sauce-connect-plugin</artifactId>
-			<version>2.1.25</version>
+			<groupId>com.codoid.products</groupId>
+			<artifactId>fillo</artifactId>
+			<version>1.21</version>
 		</dependency>
 		<dependency>
 			<groupId>org.apache.poi</groupId>
@@ -68,10 +62,29 @@
 			<artifactId>poi-ooxml-schemas</artifactId>
 			<version>3.15</version>
 		</dependency>
+		
+		<!-- Dependencies for working with csv file -->
 		<dependency>
 			<groupId>com.opencsv</groupId>
 			<artifactId>opencsv</artifactId>
 			<version>4.1</version>
+		</dependency>
+		
+		<!-- Jackson dependencies for json response parsing -->
+		<dependency>
+			<groupId>com.fasterxml.jackson.core</groupId>
+			<artifactId>jackson-core</artifactId>
+			<version>2.9.2</version>
+		</dependency>
+		<dependency>
+			<groupId>com.fasterxml.jackson.core</groupId>
+			<artifactId>jackson-annotations</artifactId>
+			<version>2.9.2</version>
+		</dependency>
+		<dependency>
+			<groupId>com.fasterxml.jackson.core</groupId>
+			<artifactId>jackson-databind</artifactId>
+			<version>2.9.2</version>
 		</dependency>
 	</dependencies>
 

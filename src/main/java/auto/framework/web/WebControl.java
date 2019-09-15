@@ -38,7 +38,6 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 import auto.framework.ReportLog;
 import auto.framework.TestManager;
 import auto.framework.WebManager;
-import auto.framework.drivers.SauceLabsDriver;
 
 public class WebControl {
 
@@ -234,10 +233,6 @@ public class WebControl {
         File screenshot = ((TakesScreenshot)augmentedDriver).
                             getScreenshotAs(OutputType.FILE);*/
 
-		if(driver instanceof SauceLabsDriver){
-			return;
-		}
-
 		if(!(driver instanceof TakesScreenshot)) {
 			driver = (RemoteWebDriver) new Augmenter().augment(driver);
 		}
@@ -266,10 +261,6 @@ public class WebControl {
 		/*WebDriver augmentedDriver = new Augmenter().augment(driver);
         File screenshot = ((TakesScreenshot)augmentedDriver).
                             getScreenshotAs(OutputType.FILE);*/
-
-		if(driver instanceof SauceLabsDriver){
-			return;
-		}
 
 		if(!(driver instanceof TakesScreenshot)) {
 			driver = (RemoteWebDriver) new Augmenter().augment(driver);
