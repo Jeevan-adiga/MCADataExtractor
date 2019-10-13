@@ -4,8 +4,10 @@ import java.util.ArrayList;
 import java.util.List;
 
 import com.fasterxml.jackson.annotation.JsonCreator;
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import com.fasterxml.jackson.annotation.JsonProperty;
 
+@JsonIgnoreProperties(ignoreUnknown=true)
 public final class MoviesDetails {
     public final String status;
     public final String status_message;
@@ -23,6 +25,7 @@ public final class MoviesDetails {
         this.meta = meta;
     }
 
+    @JsonIgnoreProperties(ignoreUnknown=true)
     public static final class Data {
         public final Movie movie;
 
@@ -31,6 +34,7 @@ public final class MoviesDetails {
             this.movie = movie;
         }
 
+        @JsonIgnoreProperties(ignoreUnknown=true)
         public static final class Movie {
             public final long id;
             public final String url;
@@ -102,7 +106,8 @@ public final class MoviesDetails {
                 this.date_uploaded = date_uploaded;
                 this.date_uploaded_unix = date_uploaded_unix;
             }
-    
+
+            @JsonIgnoreProperties(ignoreUnknown=true)
             public static final class Cast {
                 public final String name;
                 public final String character_name;
@@ -117,7 +122,8 @@ public final class MoviesDetails {
                     this.imdb_code = imdb_code;
                 }
             }
-    
+
+            @JsonIgnoreProperties(ignoreUnknown=true)
             public static final class Torrent {
                 public final String url;
                 public final String hash;
@@ -145,6 +151,7 @@ public final class MoviesDetails {
         }
     }
 
+    @JsonIgnoreProperties(ignoreUnknown=true)
     public static final class Meta {
         public final long server_time;
         public final String server_timezone;
@@ -167,9 +174,11 @@ public final class MoviesDetails {
 
 		List<String> castDetails = new ArrayList<String>();
 
-		for (Data.Movie.Cast cast : data.movie.cast) {
-			castDetails.add(cast.name + " as " + cast.character_name);
-		}
+		if(data.movie.cast != null) {
+            for (Data.Movie.Cast cast : data.movie.cast) {
+                castDetails.add(cast.name + " as " + cast.character_name);
+            }
+        }
 		
 		return castDetails;
 	}

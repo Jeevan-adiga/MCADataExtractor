@@ -16,7 +16,7 @@ import org.apache.http.util.EntityUtils;
 import com.api.response.ListMovies;
 import com.api.response.MoviesDetails;
 import com.fasterxml.jackson.databind.ObjectMapper;
-import com.mca.utils.Constants;
+import com.Constants;
 
 import auto.framework.ReportLog;
 

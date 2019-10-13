@@ -4,8 +4,11 @@ import java.util.ArrayList;
 import java.util.List;
 
 import com.fasterxml.jackson.annotation.JsonCreator;
+import com.fasterxml.jackson.annotation.JsonIgnore;
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import com.fasterxml.jackson.annotation.JsonProperty;
 
+@JsonIgnoreProperties(ignoreUnknown=true)
 public final class ListMovies {
     public final String status;
     public final String status_message;
@@ -22,6 +25,7 @@ public final class ListMovies {
         this.meta = meta;
     }
 
+    @JsonIgnoreProperties(ignoreUnknown=true)
     public static final class Data {
         public final long movie_count;
         public final long limit;
@@ -36,6 +40,7 @@ public final class ListMovies {
             this.movies = movies;
         }
 
+        @JsonIgnoreProperties(ignoreUnknown=true)
         public static final class Movy {
             public final long id;
             public final String url;
@@ -93,7 +98,8 @@ public final class ListMovies {
                 this.date_uploaded = date_uploaded;
                 this.date_uploaded_unix = date_uploaded_unix;
             }
-    
+
+            @JsonIgnoreProperties(ignoreUnknown=true)
             public static final class Torrent {
                 public final String url;
                 public final String hash;
@@ -121,6 +127,7 @@ public final class ListMovies {
         }
     }
 
+    @JsonIgnoreProperties(ignoreUnknown=true)
     public static final class Meta {
         public final long server_time;
         public final String server_timezone;

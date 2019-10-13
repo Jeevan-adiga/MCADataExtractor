@@ -151,7 +151,6 @@
 					<configuration>
 						<!-- Change to false to run the tests on compile -->
 						<skip>true</skip>
-						<skipSurefireReport>true</skipSurefireReport>
 					</configuration>
 				</plugin>
 				<plugin>

@@ -2,12 +2,12 @@
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 <suite name="Test Suite" parallel="false">
 
-	<test name="ExtractDataFromMCA1">
+	<test name="Add_New_Address">
 		<parameter name="browser" value="chrome"></parameter>
 		<parameter name="execute" value="true"></parameter>
 		<classes>
 			<class
-				name="test.extract.ExtractDataFromMCA"></class>
+				name="test.addressbook.test.Add_New_Address"></class>
 		</classes>
 	</test>
 </suite>
