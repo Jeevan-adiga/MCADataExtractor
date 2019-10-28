@@ -4,6 +4,9 @@ import auto.framework.ReportLog;
 import auto.framework.TestBase;
 import auto.framework.web.WebControl;
 import com.Constants;
+import com.web.addressbook.functions.NewAddressFunction;
+import com.web.addressbook.models.AddressModel;
+import com.web.addressbook.pages.AddressListPage;
 import com.web.addressbook.pages.HomePage;
 import com.web.addressbook.pages.SignInPage;
 import org.testng.annotations.Test;
@@ -27,6 +30,14 @@ public class Add_New_Address extends TestBase {
 		SignInPage.signInSection.signInButton.verifyClick();
 		ReportLog.assertTrue(HomePage.navbar.currentUser.getText().equals("adiga.jeevan@gmail.com"),
 				"Successfully logged into application");
+
+		HomePage.navbar.addressesLink.verifyClick();
+		System.out.println("address size:" + AddressListPage.addressTable.getAllRows().size());
+
+		AddressListPage.newAddress.verifyClick();
+
+		AddressModel addressModel = new AddressModel();
+		NewAddressFunction.addNewAddress(addressModel);
 	}
 
 }

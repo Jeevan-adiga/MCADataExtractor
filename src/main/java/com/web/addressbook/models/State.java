@@ -15,6 +15,9 @@ public enum State {
     String code;
     String name;
 
+    public String getCode() {
+        return code;
+    }
 //<option value="CT">Connecticut</option>
 //<option value="DE">Delaware</option>
 //<option value="DC">District of Columbia</option>
