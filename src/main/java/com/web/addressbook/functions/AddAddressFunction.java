@@ -5,7 +5,7 @@ import com.web.addressbook.models.Country;
 import com.web.addressbook.pages.AddressListPage;
 import com.web.addressbook.pages.AddAddressPage;
 
-public class NewAddressFunction {
+public class AddAddressFunction {
 
     public static void addNewAddress(AddressModel addressModel) {
 

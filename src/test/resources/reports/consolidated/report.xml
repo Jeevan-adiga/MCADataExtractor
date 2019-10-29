@@ -1,25 +1,49 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <root>
-    <test-scenario name="automation-selenium-java" status="Passed">
+    <test-scenario name="Add_New_Address" status="Passed">
         <summary>
-            <info desc="10/12/2019 11:20 AM" name="Time Started"/>
-            <info desc="10/12/2019 11:20 AM" name="Time Ended"/>
-            <info desc="0.09 mins" name="Time Elapsed"/>
-            <info desc="chrome 77.0.3865.90" name="Browser"/>
+            <info desc="10/29/2019 11:01 PM" name="Time Started"/>
+            <info desc="10/29/2019 11:02 PM" name="Time Ended"/>
+            <info desc="0.96 mins" name="Time Elapsed"/>
+            <info desc="chrome 78.0.3904.70" name="Browser"/>
         </summary>
         <test-case name="Add_New_Address">
             <test-step name="Get List Of movies via API">
-                <report desc="Navigate to http://a.testaddressbook.com/" status="Passed" timestamp="10/12/2019 11:20 AM"/>
+                <report desc="Navigate to http://a.testaddressbook.com/" status="Passed" timestamp="10/29/2019 11:01 PM"/>
             </test-step>
             <test-step name="Get 1st movie Cast details for 1st movie from above list">
-                <report desc="[Welcome Text] Verify that displayed equals true" status="Passed" timestamp="10/12/2019 11:20 AM"/>
-                <report desc="[Sign-In link] Click element" status="Passed" timestamp="10/12/2019 11:20 AM"/>
-                <report desc="[emailTextBox] Type &quot;adiga.jeevan@gmail.com&quot;" status="Passed" timestamp="10/12/2019 11:20 AM"/>
-                <report desc="[emailTextBox] Verify that typed value is &quot;adiga.jeevan@gmail.com&quot;" status="Passed" timestamp="10/12/2019 11:20 AM"/>
-                <report desc="[passwordtextBox] Type &quot;Automate@123&quot;" status="Passed" timestamp="10/12/2019 11:20 AM"/>
-                <report desc="[passwordtextBox] Verify that typed value is &quot;Automate@123&quot;" status="Passed" timestamp="10/12/2019 11:20 AM"/>
-                <report desc="[SignIn Button] Click element" status="Passed" timestamp="10/12/2019 11:20 AM"/>
-                <report desc="Successfully logged into application" status="Passed" timestamp="10/12/2019 11:20 AM"/>
+                <report desc="[Welcome Text] Verify that displayed equals true" status="Passed" timestamp="10/29/2019 11:01 PM"/>
+                <report desc="[Sign-In link] Click element" status="Passed" timestamp="10/29/2019 11:01 PM"/>
+                <report desc="[emailTextBox] Type &quot;adiga.jeevan@gmail.com&quot;" status="Passed" timestamp="10/29/2019 11:01 PM"/>
+                <report desc="[emailTextBox] Verify that typed value is &quot;adiga.jeevan@gmail.com&quot;" status="Passed" timestamp="10/29/2019 11:01 PM"/>
+                <report desc="[passwordtextBox] Type &quot;Automate@123&quot;" status="Passed" timestamp="10/29/2019 11:01 PM"/>
+                <report desc="[passwordtextBox] Verify that typed value is &quot;Automate@123&quot;" status="Passed" timestamp="10/29/2019 11:01 PM"/>
+                <report desc="[SignIn Button] Click element" status="Passed" timestamp="10/29/2019 11:01 PM"/>
+                <report desc="Successfully logged into application" status="Passed" timestamp="10/29/2019 11:01 PM"/>
+                <report desc="[addressesLink] Click element" status="Passed" timestamp="10/29/2019 11:01 PM"/>
+                <report desc="[New Address] Click element" status="Passed" timestamp="10/29/2019 11:01 PM"/>
+                <report desc="[First Name] Type &quot;Faustino&quot;" status="Passed" timestamp="10/29/2019 11:01 PM"/>
+                <report desc="[First Name] Verify that typed value is &quot;Faustino&quot;" status="Passed" timestamp="10/29/2019 11:01 PM"/>
+                <report desc="[Last Name] Type &quot;Spencer&quot;" status="Passed" timestamp="10/29/2019 11:01 PM"/>
+                <report desc="[Last Name] Verify that typed value is &quot;Spencer&quot;" status="Passed" timestamp="10/29/2019 11:01 PM"/>
+                <report desc="[Address1] Type &quot;76152 Bill Centers&quot;" status="Passed" timestamp="10/29/2019 11:01 PM"/>
+                <report desc="[Address1] Verify that typed value is &quot;76152 Bill Centers&quot;" status="Passed" timestamp="10/29/2019 11:01 PM"/>
+                <report desc="[Address2] Type &quot;Apt. 437&quot;" status="Passed" timestamp="10/29/2019 11:01 PM"/>
+                <report desc="[Address2] Verify that typed value is &quot;Apt. 437&quot;" status="Passed" timestamp="10/29/2019 11:01 PM"/>
+                <report desc="[City] Type &quot;Bradyhaven&quot;" status="Passed" timestamp="10/29/2019 11:01 PM"/>
+                <report desc="[City] Verify that typed value is &quot;Bradyhaven&quot;" status="Passed" timestamp="10/29/2019 11:01 PM"/>
+                <report desc="[State] Select {value: AK}" status="Passed" timestamp="10/29/2019 11:01 PM"/>
+                <report desc="[Zip Code] Type &quot;61772-2764&quot;" status="Passed" timestamp="10/29/2019 11:01 PM"/>
+                <report desc="[CreateAddress] Click element" status="Passed" timestamp="10/29/2019 11:01 PM"/>
+                <report desc="[First Name] Verify that text equals Faustino" status="Passed" timestamp="10/29/2019 11:02 PM"/>
+                <report desc="[Last Name] Verify that text equals Spencer" status="Passed" timestamp="10/29/2019 11:02 PM"/>
+                <report desc="[Address1] Verify that text equals 76152 Bill Centers" status="Passed" timestamp="10/29/2019 11:02 PM"/>
+                <report desc="[Address2] Verify that text equals Apt. 437" status="Passed" timestamp="10/29/2019 11:02 PM"/>
+                <report desc="[City] Verify that text equals Bradyhaven" status="Passed" timestamp="10/29/2019 11:02 PM"/>
+                <report desc="[State] Verify that text equals AK" status="Passed" timestamp="10/29/2019 11:02 PM"/>
+                <report desc="[Zip Code] Verify that text equals 61772-2764" status="Passed" timestamp="10/29/2019 11:02 PM"/>
+                <report desc="[Country-US] Verify that text equals us" status="Passed" timestamp="10/29/2019 11:02 PM"/>
+                <report desc="[List] Click element" status="Passed" timestamp="10/29/2019 11:02 PM"/>
             </test-step>
         </test-case>
     </test-scenario>

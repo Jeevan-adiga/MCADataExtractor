@@ -4,11 +4,13 @@ import auto.framework.ReportLog;
 import auto.framework.TestBase;
 import auto.framework.web.WebControl;
 import com.Constants;
-import com.web.addressbook.functions.NewAddressFunction;
+import com.web.addressbook.functions.AddAddressFunction;
+import com.web.addressbook.functions.ViewAddressFunction;
 import com.web.addressbook.models.AddressModel;
 import com.web.addressbook.pages.AddressListPage;
 import com.web.addressbook.pages.HomePage;
 import com.web.addressbook.pages.SignInPage;
+import com.web.addressbook.pages.ViewAddressPage;
 import org.testng.annotations.Test;
 
 public class Add_New_Address extends TestBase {
@@ -19,7 +21,7 @@ public class Add_New_Address extends TestBase {
 		ReportLog.setTestCase("Add_New_Address");
 		
 		ReportLog.setTestStep("Get List Of movies via API");
-		WebControl.open(Constants.WEB_BASE_URL);
+			WebControl.open(Constants.WEB_BASE_URL);
 
 		ReportLog.setTestStep("Get 1st movie Cast details for 1st movie from above list");
 		HomePage.welcomeText.assertDisplayed(true);
@@ -37,7 +39,12 @@ public class Add_New_Address extends TestBase {
 		AddressListPage.newAddress.verifyClick();
 
 		AddressModel addressModel = new AddressModel();
-		NewAddressFunction.addNewAddress(addressModel);
+		AddAddressFunction.addNewAddress(addressModel);
+
+		ViewAddressPage.list.waitForDisplay(true, 20);
+		ViewAddressFunction.verifyAddressAdded(addressModel);
+		ViewAddressPage.list.assertClick();
+		AddressListPage.addressTable.waitForDisplay(true, 10);
 	}
 
 }

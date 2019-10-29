@@ -18,6 +18,10 @@ public enum State {
     public String getCode() {
         return code;
     }
+
+    public String getName() {
+        return name;
+    }
 //<option value="CT">Connecticut</option>
 //<option value="DE">Delaware</option>
 //<option value="DC">District of Columbia</option>
