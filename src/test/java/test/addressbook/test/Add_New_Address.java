@@ -5,6 +5,7 @@ import auto.framework.TestBase;
 import auto.framework.web.WebControl;
 import com.Constants;
 import com.web.addressbook.functions.AddAddressFunction;
+import com.web.addressbook.functions.SignInFunction;
 import com.web.addressbook.functions.ViewAddressFunction;
 import com.web.addressbook.models.AddressModel;
 import com.web.addressbook.pages.AddressListPage;
@@ -18,33 +19,25 @@ public class Add_New_Address extends TestBase {
     @Test
 	public void testCase() {
 		
-		ReportLog.setTestCase("Add_New_Address");
+		ReportLog.setTestCase("Add New Address");
 		
-		ReportLog.setTestStep("Get List Of movies via API");
+		ReportLog.setTestStep("1 - Navigate to application Url");
 			WebControl.open(Constants.WEB_BASE_URL);
+			HomePage.welcomeText.assertDisplayed(true);
 
-		ReportLog.setTestStep("Get 1st movie Cast details for 1st movie from above list");
-		HomePage.welcomeText.assertDisplayed(true);
+		ReportLog.setTestStep("2 - Login to application");
+			SignInFunction.login("adiga.jeevan@gmail.com", "Automate@123");
 
-		HomePage.navbar.signInLink.verifyClick();
-		SignInPage.signInSection.emailTextBox.verifySendKeys("adiga.jeevan@gmail.com");
-		SignInPage.signInSection.passwordtextBox.verifySendKeys("Automate@123");
-		SignInPage.signInSection.signInButton.verifyClick();
-		ReportLog.assertTrue(HomePage.navbar.currentUser.getText().equals("adiga.jeevan@gmail.com"),
-				"Successfully logged into application");
+		ReportLog.setTestStep("3 - Add new Address");
+			HomePage.navbar.addressesLink.verifyClick();
+			AddressListPage.newAddress.verifyClick();
 
-		HomePage.navbar.addressesLink.verifyClick();
-		System.out.println("address size:" + AddressListPage.addressTable.getAllRows().size());
+			AddressModel addressModel = new AddressModel();
+			AddAddressFunction.addNewAddress(addressModel);
 
-		AddressListPage.newAddress.verifyClick();
-
-		AddressModel addressModel = new AddressModel();
-		AddAddressFunction.addNewAddress(addressModel);
-
-		ViewAddressPage.list.waitForDisplay(true, 20);
-		ViewAddressFunction.verifyAddressAdded(addressModel);
-		ViewAddressPage.list.assertClick();
-		AddressListPage.addressTable.waitForDisplay(true, 10);
+			ViewAddressPage.list.waitForDisplay(true, 20);
+			ViewAddressFunction.verifyAddressAdded(addressModel);
+			ViewAddressPage.list.assertClick();
+			AddressListPage.addressTable.waitForDisplay(true, 10);
 	}
-
 }
