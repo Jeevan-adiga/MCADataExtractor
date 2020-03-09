@@ -7,7 +7,7 @@
 		<parameter name="execute" value="true"></parameter>
 		<classes>
 			<class
-				name="test.addressbook.test.Add_New_Address"></class>
+				name="test.addressbook.test.ID_001_Verify_Add_New_Address"></class>
 		</classes>
 	</test>
 </suite>

@@ -14,12 +14,12 @@ import com.web.addressbook.pages.SignInPage;
 import com.web.addressbook.pages.ViewAddressPage;
 import org.testng.annotations.Test;
 
-public class Add_New_Address extends TestBase {
+public class ID_001_Verify_Add_New_Address extends TestBase {
 
     @Test
 	public void testCase() {
 		
-		ReportLog.setTestCase("Add New Address");
+		ReportLog.setTestCase("ID_001_Verify_Add_New_Address");
 		
 		ReportLog.setTestStep("1 - Navigate to application Url");
 			WebControl.open(Constants.WEB_BASE_URL);
