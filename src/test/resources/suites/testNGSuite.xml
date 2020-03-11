@@ -6,8 +6,7 @@
 		<parameter name="browser" value="chrome"></parameter>
 		<parameter name="execute" value="true"></parameter>
 		<classes>
-			<class
-				name="test.addressbook.test.ID_001_Verify_Add_New_Address"></class>
+			<class name="test.addressbook.test.ID_001_Verify_Add_New_Address"></class>
 		</classes>
 	</test>
 </suite>
