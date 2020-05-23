@@ -9,4 +9,11 @@
 			<class name="test.addressbook.test.ID_001_Verify_Add_New_Address"></class>
 		</classes>
 	</test>
+
+	<test name="Get_CastDetails_for_a_movie">
+		<parameter name="runWebdriver" value="false"></parameter>
+		<classes>
+			<class name="test.yts.api.Get_CastDetails_for_a_movie"></class>
+		</classes>
+	</test>
 </suite>

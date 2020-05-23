@@ -25,7 +25,7 @@ public class ID_001_Verify_Add_New_Address extends TestBase {
 			HomePage.welcomeText.assertDisplayed(true);
 
 		ReportLog.setTestStep("2 - Login to application");
-			SignInFunction.login("adiga.jeevan@gmail.com", "Automate@123");
+			SignInFunction.login("test@ahem.email", "test");
 
 		ReportLog.setTestStep("3 - Add new Address");
 			HomePage.navbar.addressesLink.verifyClick();
