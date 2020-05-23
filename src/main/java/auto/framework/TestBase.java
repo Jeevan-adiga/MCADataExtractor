@@ -83,7 +83,7 @@ public class TestBase extends TestListenerAdapter{
 			}
 	  }
 
-	@AfterTest
+	  @AfterTest
 	  public static void endTest(ITestContext context) throws InterruptedException {
 		
 		boolean executeScript;

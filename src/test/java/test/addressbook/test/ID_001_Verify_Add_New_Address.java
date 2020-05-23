@@ -10,7 +10,6 @@ import com.web.addressbook.functions.ViewAddressFunction;
 import com.web.addressbook.models.AddressModel;
 import com.web.addressbook.pages.AddressListPage;
 import com.web.addressbook.pages.HomePage;
-import com.web.addressbook.pages.SignInPage;
 import com.web.addressbook.pages.ViewAddressPage;
 import org.testng.annotations.Test;
 

@@ -23,31 +23,31 @@ public class AddressListPage extends Page {
             super(name, by);
         }
 
-        public TableRow row(final int index) {
-            return new TableRow("Row:" + index, By.xpath(".//tbody//tr[" + index + "]"), this);
+        public AddressTableRow addressTableRow(final int index) {
+            return new AddressTableRow("AddressTableRow:" + index, By.xpath(".//tbody//tr[" + index + "]"), this);
         }
 
-        public List<TableRow> getAllRows() {
+        public List<AddressTableRow> getAllRows() {
             int i = 1;
-            final List<TableRow> bulkOrderRows = new ArrayList<>();
-            TableRow row = new TableRow("Row:" + i, By.xpath(".//tbody//tr[" + i + "]"), this);
+            final List<AddressTableRow> addressTableRows = new ArrayList<>();
+            AddressTableRow row = new AddressTableRow("Row:" + i, By.xpath(".//tbody//tr[" + i + "]"), this);
 
             do {
                 if (row.isDisplayed()) {
-                    bulkOrderRows.add(row);
+                    addressTableRows.add(row);
                 }
                 i++;
-                row = new TableRow("Row:" + i, By.xpath(".//tbody//tr[" + i + "]"), this);
+                row = new AddressTableRow("Row:" + i, By.xpath(".//tbody//tr[" + i + "]"), this);
             } while (row.isDisplayed());
 
-            return bulkOrderRows;
+            return addressTableRows;
         }
 
-        public TableHeader header() {
-            return new TableHeader("Table-Header", By.xpath(".//thead"), this);
+        public AddressTableHeader header() {
+            return new AddressTableHeader("Table-Header", By.xpath(".//thead"), this);
         }
 
-        public static class TableRow extends Element {
+        public static class AddressTableRow extends Element {
             public Element firstName;
             public Element lastName;
             public Element city;
@@ -56,7 +56,7 @@ public class AddressListPage extends Page {
             public Link edit;
             public Link destroy;
 
-            public TableRow(final String name, final By by, final Element parent) {
+            public AddressTableRow(final String name, final By by, final Element parent) {
                 super(name, by, parent);
                 firstName = new Element("firstName", By.xpath(".//td[1]"), this);
                 lastName = new Element("lastName", By.xpath(".//td[2]"), this);
@@ -68,13 +68,13 @@ public class AddressListPage extends Page {
             }
         }
 
-        public static class TableHeader extends Element {
+        public static class AddressTableHeader extends Element {
             public Element firstName;
             public Element lastName;
             public Element city;
             public Element state;
 
-            public TableHeader(final String name, final By by, final Element parent) {
+            public AddressTableHeader(final String name, final By by, final Element parent) {
                 super(name, by, parent);
                 firstName = new Element("firstName", By.xpath(".//td[1]"), this);
                 lastName = new Element("lastName", By.xpath(".//td[2]"), this);
