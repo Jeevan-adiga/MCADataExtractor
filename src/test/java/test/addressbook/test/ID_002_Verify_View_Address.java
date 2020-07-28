@@ -27,10 +27,10 @@ public class ID_002_Verify_View_Address extends TestBase {
 		HomePage.welcomeText.assertDisplayed(true);
 
 		HomePage.navbar.signInLink.verifyClick();
-		SignInPage.signInSection.emailTextBox.verifySendKeys("adiga.jeevan@gmail.com");
-		SignInPage.signInSection.passwordtextBox.verifySendKeys("Automate@123");
+		SignInPage.signInSection.emailTextBox.verifySendKeys("test@ahem.email");
+		SignInPage.signInSection.passwordtextBox.verifySendKeys("test");
 		SignInPage.signInSection.signInButton.verifyClick();
-		ReportLog.assertTrue(HomePage.navbar.currentUser.getText().equals("adiga.jeevan@gmail.com"),
+		ReportLog.assertTrue(HomePage.navbar.currentUser.getText().equals("test@ahem.email"),
 				"Successfully logged into application");
 
 		HomePage.navbar.addressesLink.verifyClick();
