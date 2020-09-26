@@ -184,7 +184,6 @@ public class Element implements ISearchContext {
 			return false;
 		}
 	}
-	
 
 	protected Boolean isInteractive(Boolean log){
 		try {
@@ -194,9 +193,7 @@ public class Element implements ISearchContext {
 			return false;
 		}
 	}
-	
-	
-	
+
 	public void highlight() {
 		WebElement element = toWebElement();
 		WebDriver driver = WebManager.getDriver();
@@ -548,10 +545,6 @@ public class Element implements ISearchContext {
 		return success;
 	}
 
-/*	public void sendKeys(CharSequence... keysToSend) {
-		
-	} */
-
 //clear
 	public void clear() {
 		ReportLog.logEvent(true, "[" + name + "] Clear");
@@ -833,7 +826,7 @@ public class Element implements ISearchContext {
 	public void myCustomMethod() {
 		try {
 			JavascriptExecutor exec = (JavascriptExecutor) WebManager.getDriver();
-			//Commented out by Jemai due to unknown functionality
+			//Commented out due to unknown functionality
 			//exec.executeScript("window.showModalDialog = function( sURL,vArguments, sFeatures) { window.open(sURL, 'modal', sFeatures); }");
 			exec.executeScript("arguments[0].click()", this.toWebElement());
 			ReportLog.passed("["+ this.name + "] Click element");

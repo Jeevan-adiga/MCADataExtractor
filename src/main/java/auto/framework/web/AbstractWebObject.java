@@ -22,23 +22,11 @@ public abstract class AbstractWebObject {
 	public <Expected> Boolean waitForProperty(final String property,final Expected expected,long timeOutInSeconds){
 		return waitForProperty(property, expected, timeOutInSeconds, Conditions.equals);
 	}
-	
-//	public <Expected> Boolean verifyProperty(Enum<?> property,Expected expected){
-//		return verifyProperty(property.toString(), expected, Conditions.equals);
-//	};
-	
+
 	public <Expected> Boolean verifyProperty(String property,Expected expected){
 		return verifyProperty(property, expected, Conditions.equals);
-	};
-	
-//	public <Expected> Boolean verifyProperty(Enum<?> property,Condition<Expected> validation){
-//		return verifyProperty(property.toString(), validation);
-//	};
-//	
-//	public <Expected> Boolean verifyProperty(Enum<?> property,Expected expected,Condition<Expected> validation){
-//		return verifyProperty(property.toString(), expected, validation);
-//	};
-	
+	}
+
 	public <Expected> Boolean verifyProperty(String property,Condition<Expected> validation){
 		try { 
 			return assertProperty(property, validation);
@@ -49,7 +37,7 @@ public abstract class AbstractWebObject {
 			ReportLog.logError(error);
 			return false;
 		}
-	};
+	}
 	
 	public <Expected> Boolean verifyProperty(String property,Expected expected,Condition<Expected> validation){
 		try { 
@@ -61,7 +49,7 @@ public abstract class AbstractWebObject {
 			ReportLog.logError(error);
 			return false;
 		}
-	};
+	}
 	
 	public <Expected> Boolean assertProperty(String property,Condition<Expected> validation, WaitFor.Timeout timeout){
 		return assertProperty(property, validation);
@@ -82,7 +70,7 @@ public abstract class AbstractWebObject {
 			throw error;
 		}
 		return success;
-	};
+	}
 	
 	public <Expected> Boolean assertProperty(String property,Expected expected,Condition<Expected> validation){
 		Object actual = getProperty(property);
@@ -98,7 +86,7 @@ public abstract class AbstractWebObject {
 			throw error;
 		}
 		return success;
-	};
+	}
 	
 	public <Expected> Boolean waitForProperty(final String property,final Expected expected,long timeOutInSeconds,final Condition<Expected> validation){
 		WebDriverWait wait = new WebDriverWait(WebManager.getDriver(),timeOutInSeconds);
@@ -118,6 +106,6 @@ public abstract class AbstractWebObject {
 			success = false;
 		}
 		return success;
-	};
+	}
 
 }

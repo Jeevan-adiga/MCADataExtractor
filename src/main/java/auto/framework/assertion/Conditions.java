@@ -138,7 +138,7 @@ public class Conditions {
 			public String name() {
 				return "matches";
 			}
-		};
+		}
 		
 		public static class NotMatches extends Matches {	
 			
@@ -151,7 +151,7 @@ public class Conditions {
 			public String name() {
 				return "does not match";
 			}
-		};
+		}
 		
 		public static class IsNull implements Condition<Object> {		
 			
@@ -164,7 +164,7 @@ public class Conditions {
 			public String name() {
 				return "is null";
 			}
-		};
+		}
 
 		public static class NotIsNull extends IsNull {	
 			
@@ -177,7 +177,7 @@ public class Conditions {
 			public String name() {
 				return "is not null";
 			}
-		};
+		}
 		
 		public static class IsBlank implements Condition<Object> {		
 			
@@ -190,7 +190,7 @@ public class Conditions {
 			public String name() {
 				return "is blank";
 			}
-		};
+		}
 
 		public static class NotIsBlank extends IsNull {	
 			
@@ -203,7 +203,7 @@ public class Conditions {
 			public String name() {
 				return "is not blank";
 			}
-		};
+		}
 		
 	}
 	

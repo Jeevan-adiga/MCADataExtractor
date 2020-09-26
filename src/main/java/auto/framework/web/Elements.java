@@ -1,7 +1,5 @@
 package auto.framework.web;
 
-//import java.util.List;
-
 import java.util.List;
 
 import org.openqa.selenium.By;

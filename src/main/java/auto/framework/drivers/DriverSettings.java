@@ -5,8 +5,8 @@ import org.openqa.selenium.remote.CapabilityType;
 import org.openqa.selenium.remote.DesiredCapabilities;
 
 public class DriverSettings {
-	
-	//TODO
+
+	// TODO
 	public static class BrowserInfo {
 		
 		public String browserType;
@@ -55,15 +55,7 @@ public class DriverSettings {
 		String value = setting.getValue();
 		return value!=null? value : defValue;
 	}
-	
-//	public static String getProperty(String ...keys){
-//		for(String key: keys){
-//			String value = TestManager.Preferences.getPreference(key);
-//			if(value!=null) return value;
-//		}
-//		return null;
-//	}
-	
+
 	public static DesiredCapabilities getDesiredCapabilities(){
 		
 		DesiredCapabilities capabilities = new DesiredCapabilities();
