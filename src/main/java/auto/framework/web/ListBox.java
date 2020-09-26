@@ -108,7 +108,7 @@ public class ListBox extends FormElement {
 	public ArrayList<String> getList(){
 		final ArrayList<String> curlist = new ArrayList<String>();
 		for(final WebElement element:getHandler().getOptions()){
-			curlist.add(element.getText().toString());
+			curlist.add(element.getText());
 		}
 		return curlist;
 	}
@@ -118,7 +118,7 @@ public class ListBox extends FormElement {
 		final List<WebElement> opt = getHandler().getOptions();
 		opt.remove(getHandler().getFirstSelectedOption());
 		for(final WebElement element:opt){
-			curlist.add(element.getText().toString());
+			curlist.add(element.getText());
 		}
 		return curlist;
 	}
@@ -126,7 +126,7 @@ public class ListBox extends FormElement {
 	public ArrayList<String> getListOfOptionValues(){
 		final ArrayList<String> curlist = new ArrayList<String>();
 		for(final WebElement element:getHandler().getOptions()){
-			curlist.add(element.getAttribute("value").toString());
+			curlist.add(element.getAttribute("value"));
 		}
 		return curlist;
 	}
@@ -136,7 +136,7 @@ public class ListBox extends FormElement {
 		final List<WebElement> options = getHandler().getOptions();
 		options.remove(getHandler().getFirstSelectedOption());
 		for(final WebElement element:getHandler().getOptions()){
-			curlist.add(element.getAttribute("value").toString());
+			curlist.add(element.getAttribute("value"));
 		}
 		return curlist;
 	}

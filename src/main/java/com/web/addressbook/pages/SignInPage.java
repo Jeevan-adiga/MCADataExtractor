@@ -1,7 +1,6 @@
 package com.web.addressbook.pages;
 
 import auto.framework.web.Element;
-import auto.framework.web.Page;
 import auto.framework.web.TextBox;
 import org.openqa.selenium.By;
 

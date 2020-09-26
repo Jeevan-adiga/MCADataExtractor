@@ -16,26 +16,6 @@ public class Conditions {
 	public static final Condition<Object> notIsNull =  new Condition.NotIsNull();
 	public static final Condition<Object> isBlank =  new Condition.IsBlank();
 	public static final Condition<Object> notIsBlank =  new Condition.NotIsBlank();
-	
-/*	private static class NegativeCondition<Expected> implements Condition<Expected> {
-
-		private final Condition<Expected> positive;
-		
-		public NegativeCondition(Condition<Expected> positive){
-			this.positive = positive;
-		}
-		
-		@Override
-		public String name() {
-			return "negative<"+positive.name()+">";
-		}
-
-		@Override
-		public Boolean verify(Expected expected, Object actual) {
-			return positive.verify(expected, actual);
-		}
-		
-	}	*/
 
 	public static interface Condition<Expected> {
 		
@@ -53,7 +33,7 @@ public class Conditions {
 			public String name() {
 				return "equals";
 			}
-		};
+		}
 		
 		public static class NotEquals extends Equals {	
 			
@@ -66,7 +46,7 @@ public class Conditions {
 			public String name() {
 				return "does not equal";
 			}
-		};
+		}
 
 		public static class EqualsIgnoreCase implements Condition<String> {	
 			
@@ -79,7 +59,7 @@ public class Conditions {
 			public String name() {
 				return "equals (ignore case)";
 			}
-		};
+		}
 
 		public static class NotEqualsIgnoreCase extends EqualsIgnoreCase {	
 			
@@ -92,7 +72,7 @@ public class Conditions {
 			public String name() {
 				return "does not equal (ignore case)";
 			}
-		};
+		}
 
 		public static class Contains implements Condition<String> {	
 			
@@ -105,7 +85,7 @@ public class Conditions {
 			public String name() {
 				return "contains";
 			}
-		};
+		}
 
 		public static class NotContains extends Contains {	
 			
@@ -118,7 +98,7 @@ public class Conditions {
 			public String name() {
 				return "does not contain";
 			}
-		};
+		}
 
 
 		public static class ContainsIgnoreCase implements Condition<String> {	
@@ -132,7 +112,7 @@ public class Conditions {
 			public String name() {
 				return "contains (ignore case)";
 			}
-		};
+		}
 
 		public static class NotContainsIgnoreCase extends ContainsIgnoreCase {	
 			
@@ -145,7 +125,7 @@ public class Conditions {
 			public String name() {
 				return "does not contain (ignore case)";
 			}
-		};
+		}
 
 		public static class Matches implements Condition<String> {	
 			

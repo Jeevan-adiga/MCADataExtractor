@@ -14,7 +14,7 @@ import auto.framework.TestBase;
 public class Get_CastDetails_for_a_movie extends TestBase {
 	
 	@Test
-	public void testCase() throws ClientProtocolException, IOException {
+	public void testCase() throws IOException {
 		
 		ReportLog.setTestCase("Get Cast details for a movie");
 		

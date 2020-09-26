@@ -1,7 +1,5 @@
 package test.framework;
 
-import org.testng.annotations.Test;
-
 import auto.framework.WebManager;
 
 public class SetupTest extends WebManager {

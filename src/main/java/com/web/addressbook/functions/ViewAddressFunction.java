@@ -1,12 +1,8 @@
 package com.web.addressbook.functions;
 
-import auto.framework.web.Element;
-import auto.framework.web.Link;
 import com.web.addressbook.models.AddressModel;
 import com.web.addressbook.models.Country;
-import com.web.addressbook.pages.BasePage;
 import com.web.addressbook.pages.ViewAddressPage;
-import org.openqa.selenium.By;
 
 /**
  * Page-Object representation of Welcome page

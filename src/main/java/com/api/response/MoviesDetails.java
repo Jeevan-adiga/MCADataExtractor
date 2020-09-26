@@ -65,8 +65,8 @@ public final class MoviesDetails {
             public final String large_screenshot_image1;
             public final String large_screenshot_image2;
             public final String large_screenshot_image3;
-            public final Cast cast[];
-            public final Torrent torrents[];
+            public final Cast[] cast;
+            public final Torrent[] torrents;
             public final String date_uploaded;
             public final long date_uploaded_unix;
     

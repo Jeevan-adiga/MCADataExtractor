@@ -1,7 +1,5 @@
 package test.framework;
 
-import org.testng.annotations.Test;
-
 import auto.framework.ReportLog;
 import auto.framework.TestBase;
 

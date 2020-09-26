@@ -4,9 +4,6 @@ import auto.framework.web.Element;
 import auto.framework.web.Link;
 import org.openqa.selenium.By;
 
-import java.util.ArrayList;
-import java.util.List;
-
 /**
  * Page-Object representation of Welcome page
  */

@@ -1,7 +1,6 @@
 package com.web.addressbook.models;
 
 import com.github.javafaker.Faker;
-import org.apache.commons.lang3.RandomUtils;
 
 /**
  * this class represent Address

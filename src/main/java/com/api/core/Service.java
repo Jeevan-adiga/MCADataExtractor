@@ -23,7 +23,7 @@ import auto.framework.ReportLog;
 public class Service {
 
 	
-	public static ListMovies provideMovieList() throws ClientProtocolException, IOException {
+	public static ListMovies provideMovieList() throws IOException {
 		
 		String url = Constants.WEBSERVICE_ENDPOINT + "list_movies.json";
 		ReportLog.addInfo("Provide MovieList Url:"+url);
@@ -53,7 +53,7 @@ public class Service {
 		return listMovies;
 	}
 	
-	public static MoviesDetails provideMovieDetailsWithoutImageWithCast(String movieId) throws ClientProtocolException, IOException {
+	public static MoviesDetails provideMovieDetailsWithoutImageWithCast(String movieId) throws IOException {
 		
 		String url = Constants.WEBSERVICE_ENDPOINT + "movie_details.json?movie_id="+movieId+"&with_images=false&with_cast=true";
 		ReportLog.addInfo("MovieDetails Url:"+url);

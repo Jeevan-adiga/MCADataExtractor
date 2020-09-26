@@ -4,7 +4,6 @@ import java.util.ArrayList;
 import java.util.List;
 
 import com.fasterxml.jackson.annotation.JsonCreator;
-import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import com.fasterxml.jackson.annotation.JsonProperty;
 
@@ -30,7 +29,7 @@ public final class ListMovies {
         public final long movie_count;
         public final long limit;
         public final long page_number;
-        public final Movy movies[];
+        public final Movy[] movies;
 
         @JsonCreator
         public Data(@JsonProperty("movie_count") long movie_count, @JsonProperty("limit") long limit, @JsonProperty("page_number") long page_number, @JsonProperty("movies") Movy[] movies){
@@ -65,7 +64,7 @@ public final class ListMovies {
             public final String medium_cover_image;
             public final String large_cover_image;
             public final String state;
-            public final Torrent torrents[];
+            public final Torrent[] torrents;
             public final String date_uploaded;
             public final long date_uploaded_unix;
     
