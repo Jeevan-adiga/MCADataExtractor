@@ -66,6 +66,16 @@ public class AddressListPage extends Page {
                 edit = new Link("edit", By.xpath(".//td[6]/a"), this);
                 destroy = new Link("destroy", By.xpath(".//td[7]/a"), this);
             }
+
+            @Override
+            public String toString() {
+                return "AddressTableRow{" +
+                        "firstName=" + firstName.getText() +
+                        ", lastName=" + lastName.getText() +
+                        ", city=" + city.getText() +
+                        ", state=" + state.getText() +
+                        '}';
+            }
         }
 
         public static class AddressTableHeader extends Element {
